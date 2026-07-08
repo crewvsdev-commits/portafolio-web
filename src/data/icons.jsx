@@ -19,6 +19,11 @@ import {
   SiOllama,
   SiCloudinary,
   SiScrumalliance,
+  SiFastapi,
+  SiJsonwebtokens,
+  SiPostgresql,
+  SiRailway,
+  SiSqlalchemy,
 } from 'react-icons/si'
 import { DiJava, DiCss3 } from 'react-icons/di'
 import {
@@ -28,8 +33,12 @@ import {
   LuBrain,
   LuSparkles,
   LuShield,
+  LuShieldCheck,
   LuServer,
   LuTable,
+  LuWebhook,
+  LuGlobe,
+  LuKeyRound,
 } from 'react-icons/lu'
 
 export const techIcons = {
@@ -65,6 +74,17 @@ export const techIcons = {
   BI: LuChartColumn,
   Scrum: SiScrumalliance,
   Cloudinary: SiCloudinary,
+  FastAPI: SiFastapi,
+  'APIs REST': LuWebhook,
+  JWT: SiJsonwebtokens,
+  OAuth2: LuShieldCheck,
+  CORS: LuGlobe,
+  'ORM (SQLAlchemy)': SiSqlalchemy,
+  PostgreSQL: SiPostgresql,
+  Railway: SiRailway,
+  'Zero Trust': LuShieldCheck,
+  Seguridad: LuShieldCheck,
+  Encriptación: LuKeyRound,
 }
 
 export function TechIcon({ name, ...props }) {

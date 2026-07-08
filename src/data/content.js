@@ -3,15 +3,15 @@
 export const profile = {
   name: 'Victor Ricardo Santamaria Machaca',
   title: 'Desarrollador de Software',
-  focus: 'Móvil · Web · Datos',
+  focus: 'Backend · APIs · Seguridad',
   university: 'Universidad Nacional Federico Villarreal',
   degree: 'Ingeniería Informática — 9° ciclo',
-  bio: 'Estudiante de Ingeniería Informática (UNFV) con experiencia en proyectos de desarrollo tecnológico en áreas como gestión de responsabilidad social, domótica y control de acceso. Trabajo con PHP, Java, JavaScript, Flutter y herramientas de datos como SQL y Power BI, con foco en resolver problemas reales de forma proactiva y en equipo.',
+  bio: 'Estudiante de Ingeniería Informática (UNFV) enfocado en backend: diseño de APIs REST, autenticación (JWT/OAuth2) y seguridad de la información, con experiencia real construyendo un sistema en producción sobre FastAPI + PostgreSQL. También trabajo con PHP, Java, Flutter y herramientas de datos como SQL y Power BI, con foco en resolver problemas reales de forma proactiva y en equipo.',
   email: 'crewvsdev@gmail.com',
   phone: '+51 994 934 507',
   location: 'Lima Metropolitana, Perú',
   social: {
-    github: '#', // TODO: link a GitHub
+    github: 'https://github.com/CrewHH',
     linkedin: 'https://linkedin.com/in/crewdev',
   },
   cvUrl: '/cv.pdf',
@@ -32,8 +32,19 @@ export const skills = [
   },
   {
     category: 'Backend',
-    level: 70,
-    items: ['Spring', 'JSP', 'Node.js', 'Apache Tomcat'],
+    level: 90,
+    items: [
+      'FastAPI',
+      'APIs REST',
+      'JWT',
+      'OAuth2',
+      'CORS',
+      'ORM (SQLAlchemy)',
+      'Spring',
+      'JSP',
+      'Node.js',
+      'Apache Tomcat',
+    ],
   },
   {
     category: 'Datos & BI',
@@ -47,12 +58,28 @@ export const skills = [
   },
   {
     category: 'Infraestructura',
-    level: 60,
-    items: ['MySQL', 'Docker', 'Cloudflare', 'VPN Site-to-Site'],
+    level: 72,
+    items: ['PostgreSQL', 'MySQL', 'Railway', 'Docker', 'Cloudflare', 'VPN Site-to-Site'],
   },
 ]
 
 export const projects = [
+  {
+    title: 'E-zyro',
+    description:
+      'Sistema integral de gestión para E-System TIC (RRHH, Finanzas y Logística): control de asistencia con huella dactilar y verificación facial por IA, cierre de ejercicio y reportes financieros con exportación PLE SUNAT, facturación electrónica CPE, y un asistente de IA (E-zybot) embebido en la app móvil con más de 40 pantallas. Backend en FastAPI sobre Railway con autenticación JWT, ORM SQLAlchemy sobre PostgreSQL, notificaciones en tiempo real vía Firebase y archivos en Cloudinary. A cargo del desarrollo móvil completo en Flutter.',
+    tags: ['FastAPI', 'JWT', 'PostgreSQL', 'ORM (SQLAlchemy)', 'Flutter', 'Firebase', 'Cloudinary', 'Railway'],
+    link: 'https://github.com/elizzaync/E-zyro',
+    status: 'En progreso',
+  },
+  {
+    title: 'Police Prep',
+    description:
+      'Plataforma móvil y software de aprendizaje interactivo orientado al examen policial de ascenso, con infraestructura propia de control de usuarios, tokens y sesiones para evitar el préstamo de cuentas.',
+    tags: ['JWT', 'Seguridad'],
+    link: null,
+    status: 'En progreso',
+  },
   {
     title: 'E-Tutor UNFV',
     description:
@@ -103,14 +130,22 @@ export const projects = [
   },
   {
     title: 'Bóveda Digital',
-    description: 'PLACEHOLDER: descripción del proyecto.',
-    tags: [],
+    description:
+      'Sistema de almacenamiento con enfoque Zero Trust: encriptación de datos y una capa de infraestructura de seguridad para proteger el acceso a la información.',
+    tags: ['Zero Trust', 'Encriptación', 'Seguridad'],
     link: null,
     status: 'En progreso',
   },
 ]
 
 export const experience = [
+  {
+    role: 'Asistente TIC',
+    company: 'E-System TIC',
+    period: 'Abril 2026 — Presente',
+    description:
+      'Único encargado del desarrollo móvil completo (Flutter) de E-zyro, un sistema integral de gestión (RRHH, Finanzas, Logística) con backend en FastAPI sobre Railway: autenticación JWT con refresh tokens, biometría por huella dactilar y verificación facial con IA para el control de asistencia, ORM con SQLAlchemy sobre PostgreSQL, notificaciones en tiempo real con Firebase Cloud Messaging, almacenamiento de archivos en Cloudinary y envío de correos automatizado vía Google Apps Script.',
+  },
   {
     role: 'Practicante de Sistemas // TI',
     company: 'Vidawasi',
