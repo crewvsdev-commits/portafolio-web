@@ -11,7 +11,6 @@ export const profile = {
   phone: '+51 994 934 507',
   location: 'Lima Metropolitana, Perú',
   social: {
-    github: 'https://github.com/CrewHH',
     linkedin: 'https://linkedin.com/in/crewdev',
   },
   cvUrl: '/cv.pdf',
@@ -69,7 +68,7 @@ export const projects = [
     description:
       'Sistema integral de gestión para E-System TIC (RRHH, Finanzas y Logística): control de asistencia con huella dactilar y verificación facial por IA, cierre de ejercicio y reportes financieros con exportación PLE SUNAT, facturación electrónica CPE, y un asistente de IA (E-zybot) embebido en la app móvil con más de 40 pantallas. Backend en FastAPI sobre Railway con autenticación JWT, ORM SQLAlchemy sobre PostgreSQL, notificaciones en tiempo real vía Firebase y archivos en Cloudinary. A cargo del desarrollo móvil completo en Flutter.',
     tags: ['FastAPI', 'JWT', 'PostgreSQL', 'ORM (SQLAlchemy)', 'Flutter', 'Firebase', 'Cloudinary', 'Railway'],
-    link: 'https://github.com/elizzaync/E-zyro',
+    link: null,
     status: 'En progreso',
   },
   {

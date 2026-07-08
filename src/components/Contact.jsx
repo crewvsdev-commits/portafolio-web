@@ -12,9 +12,6 @@ export default function Contact() {
           {profile.email}
         </a>
         <div className="social-links">
-          <a href={profile.social.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
           <a href={profile.social.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
