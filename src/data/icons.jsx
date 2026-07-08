@@ -24,6 +24,7 @@ import {
   SiPostgresql,
   SiRailway,
   SiSqlalchemy,
+  SiRedis,
 } from 'react-icons/si'
 import { DiJava, DiCss3 } from 'react-icons/di'
 import {
@@ -85,6 +86,7 @@ export const techIcons = {
   'Zero Trust': LuShieldCheck,
   Seguridad: LuShieldCheck,
   Encriptación: LuKeyRound,
+  Redis: SiRedis,
 }
 
 export function TechIcon({ name, ...props }) {

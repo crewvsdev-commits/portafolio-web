@@ -75,8 +75,8 @@ export const projects = [
   {
     title: 'Police Prep',
     description:
-      'Plataforma móvil y software de aprendizaje interactivo orientado al examen policial de ascenso, con infraestructura propia de control de usuarios, tokens y sesiones para evitar el préstamo de cuentas.',
-    tags: ['JWT', 'Seguridad'],
+      'Plataforma de preparación para el examen de ingreso a la PNP: banco de preguntas, simulacros y flashcards organizados en las 8 áreas reales del examen (Constitución, Derecho Penal, Legislación Policial, Razonamiento Verbal/Lógico, etc.), con rachas de estudio y panel de administración de contenido. Autenticación JWT firmada con RSA (RS256) y control de dispositivo único por huella de dispositivo, que revoca sesiones de otros equipos para evitar el préstamo de cuentas. Rate limiting con Redis (ventana deslizante en login), cabeceras de seguridad, auditoría y trazabilidad (request ID, Sentry, OpenTelemetry) como middleware. Backend en FastAPI + SQLAlchemy 2.0 async sobre PostgreSQL; cliente móvil en Flutter (Clean Architecture + Riverpod) en desarrollo.',
+    tags: ['FastAPI', 'PostgreSQL', 'Redis', 'JWT', 'Flutter', 'Seguridad'],
     link: null,
     status: 'En progreso',
   },
@@ -131,8 +131,8 @@ export const projects = [
   {
     title: 'Bóveda Digital',
     description:
-      'Sistema de almacenamiento con enfoque Zero Trust: encriptación de datos y una capa de infraestructura de seguridad para proteger el acceso a la información.',
-    tags: ['Zero Trust', 'Encriptación', 'Seguridad'],
+      'Bóveda de documentos de cero conocimiento (Zero-Knowledge): el servidor nunca ve contraseñas, llaves de cifrado ni el contenido de los archivos, solo bytes opacos. El cifrado AES-256-GCM ocurre íntegramente en el cliente antes de subir cualquier archivo, las contraseñas se derivan con PBKDF2/Argon2id y nunca viajan en claro, y cada acción queda en una cadena de auditoría firmada con ECDSA y verificada en el servidor sobre una tabla append-only (un trigger de PostgreSQL rechaza cualquier UPDATE/DELETE). Incluye verificación en dos pasos por TOTP, gestión de dispositivos de confianza y una build de producción endurecida (Vite, sin `eval`, CSP estricta sin `unsafe-inline`). Backend en FastAPI + SQLAlchemy async sobre PostgreSQL, desplegado con Docker detrás de Cloudflare Tunnel.',
+    tags: ['FastAPI', 'PostgreSQL', 'JWT', 'Docker', 'Cloudflare', 'Seguridad'],
     link: null,
     status: 'En progreso',
   },
