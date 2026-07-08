@@ -1,4 +1,5 @@
 import { projects } from '../data/content'
+import { TechIcon } from '../data/icons'
 
 export default function Projects() {
   return (
@@ -16,6 +17,7 @@ export default function Projects() {
               <ul className="tag-list">
                 {project.tags.map((tag) => (
                   <li key={tag} className="tag">
+                    <TechIcon name={tag} />
                     {tag}
                   </li>
                 ))}

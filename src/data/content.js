@@ -17,29 +17,37 @@ export const profile = {
   cvUrl: '/cv.pdf',
 }
 
+// `level` es un 0-100 orientativo (uso real en proyectos + experiencia),
+// se usa para el radar y los anillos de la sección Skills.
 export const skills = [
   {
     category: 'Lenguajes',
+    level: 85,
     items: ['PHP', 'Java', 'JavaScript', 'Python', 'HTML', 'CSS'],
   },
   {
     category: 'Frontend / Móvil',
+    level: 75,
     items: ['React', 'TypeScript', 'Flutter', 'Dart'],
   },
   {
     category: 'Backend',
+    level: 70,
     items: ['Spring', 'JSP', 'Node.js', 'Apache Tomcat'],
   },
   {
     category: 'Datos & BI',
+    level: 80,
     items: ['SQL', 'Power BI', 'Excel (Macros)', 'ETL', 'Firebase Firestore'],
   },
   {
     category: 'IA / LLMs',
+    level: 65,
     items: ['Ollama', 'RAG', 'Fine-tuning LoRA'],
   },
   {
     category: 'Infraestructura',
+    level: 60,
     items: ['MySQL', 'Docker', 'Cloudflare', 'VPN Site-to-Site'],
   },
 ]
@@ -48,25 +56,10 @@ export const projects = [
   {
     title: 'E-Tutor UNFV',
     description:
-      'Sistema de tutoría con LLM (llama3:8b) vía Ollama, RAG con documentos de la universidad y fine-tuning LoRA.',
-    tags: ['Python', 'Ollama', 'RAG', 'LoRA'],
+      'Asistente académico con IA para la UNFV, nacido en un Hackaton: chatbot con base de conocimiento institucional cerrada (cursos y sílabos), motor RAG sobre documentos de la universidad, fine-tuning LoRA de un LLM local (llama3:8b vía Ollama) y una interfaz web en React + TypeScript.',
+    tags: ['React', 'TypeScript', 'Python', 'Ollama', 'RAG', 'LoRA'],
     link: null,
     status: 'En progreso',
-  },
-  {
-    title: 'Hackaton — Tutoría Universitaria',
-    description: 'Plataforma de tutoría académica construida en React + TypeScript.',
-    tags: ['React', 'TypeScript'],
-    link: null,
-    status: 'En progreso',
-  },
-  {
-    title: 'Chatbot especializado en el área estudiantil',
-    description:
-      'Chatbot con base de información institucional cerrada (universidad, cursos y sílabos) para asistencia académica automatizada, pensado para interconectarse con el ecosistema tecnológico universitario.',
-    tags: ['Chatbot', 'IA'],
-    link: null,
-    status: 'Finalizado',
   },
   {
     title: 'App Móvil de Responsabilidad Social',
