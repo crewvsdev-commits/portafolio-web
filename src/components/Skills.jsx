@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { skills } from '../data/content'
-import { TechIcon } from '../data/icons'
+import { CategoryIcon, TechIcon } from '../data/icons'
 
 // true una vez que el bloque de skills entra en pantalla, para disparar
 // la animación de dibujo del radar y los anillos.
@@ -117,6 +117,9 @@ export default function Skills() {
         {skills.map((group) => (
           <div key={group.category} className="skill-card">
             <div className="skill-card-head">
+              <span className="skill-card-icon">
+                <CategoryIcon name={group.category} size={16} />
+              </span>
               <h3>{group.category}</h3>
               <SkillRing level={group.level} active={inView} />
             </div>

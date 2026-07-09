@@ -40,6 +40,9 @@ import {
   LuWebhook,
   LuGlobe,
   LuKeyRound,
+  LuCode,
+  LuSmartphone,
+  LuCloud,
 } from 'react-icons/lu'
 
 export const techIcons = {
@@ -91,6 +94,22 @@ export const techIcons = {
 
 export function TechIcon({ name, ...props }) {
   const Icon = techIcons[name]
+  if (!Icon) return null
+  return <Icon aria-hidden="true" {...props} />
+}
+
+// Ícono representativo por categoría de skills (sección Skills).
+export const categoryIcons = {
+  Lenguajes: LuCode,
+  'Frontend / Móvil': LuSmartphone,
+  Backend: LuServer,
+  'Datos & BI': LuChartColumn,
+  'IA / LLMs': LuBrain,
+  Infraestructura: LuCloud,
+}
+
+export function CategoryIcon({ name, ...props }) {
+  const Icon = categoryIcons[name]
   if (!Icon) return null
   return <Icon aria-hidden="true" {...props} />
 }

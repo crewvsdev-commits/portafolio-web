@@ -1,20 +1,23 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --bg-alt: #f7f6fb;
-  --border: #e5e4e7;
+  --text: #5b5568;
+  --text-h: #0c0a12;
+  --bg: #fdfcff;
+  --bg-alt: #f6f4fb;
+  --border: #e5e2ee;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
+  --accent: #7c3aed;
+  --accent-2: #3b82f6;
+  --accent-bg: rgba(124, 58, 237, 0.08);
+  --accent-border: rgba(124, 58, 237, 0.35);
   --social-bg: rgba(244, 243, 236, 0.5);
+  --gradient-accent: linear-gradient(90deg, var(--accent), var(--accent-2));
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(20, 10, 50, 0.1) 0 10px 15px -3px, rgba(20, 10, 50, 0.05) 0 4px 6px -2px;
+  --glow: 0 0 0 rgba(0, 0, 0, 0);
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Outfit', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -34,16 +37,19 @@
 :root[data-theme='dark'] {
   --text: #9ca3af;
   --text-h: #f3f4f6;
-  --bg: #16171d;
-  --bg-alt: #1c1d25;
-  --border: #2e303a;
+  --bg: #070b18;
+  --bg-alt: #0d1228;
+  --border: rgba(124, 58, 237, 0.18);
   --code-bg: #1f2028;
-  --accent: #c084fc;
-  --accent-bg: rgba(192, 132, 252, 0.15);
-  --accent-border: rgba(192, 132, 252, 0.5);
+  --accent: #a78bfa;
+  --accent-2: #60a5fa;
+  --accent-bg: rgba(167, 139, 250, 0.12);
+  --accent-border: rgba(167, 139, 250, 0.4);
   --social-bg: rgba(47, 48, 58, 0.5);
+  --gradient-accent: linear-gradient(90deg, var(--accent), var(--accent-2));
   --shadow:
     rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  --glow: 0 0 24px rgba(124, 58, 237, 0.25);
   color-scheme: dark;
 }
 
@@ -117,4 +123,11 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

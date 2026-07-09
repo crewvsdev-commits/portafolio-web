@@ -158,3 +158,20 @@ export const blogPosts = [
   // PLACEHOLDER: agregar posts cuando existan.
   // { title: '...', date: '...', excerpt: '...', link: '#' },
 ]
+
+// Stats de la sección About, derivados de los datos reales de arriba
+// (nada inventado: se recalculan solos si cambian proyectos/skills).
+const uniqueTech = new Set(skills.flatMap((group) => group.items))
+
+export const stats = [
+  { value: `${projects.length}`, label: 'Proyectos' },
+  {
+    value: `${projects.filter((p) => p.status === 'Finalizado').length}`,
+    label: 'Finalizados',
+  },
+  {
+    value: `${projects.filter((p) => p.status === 'En progreso').length}`,
+    label: 'En desarrollo',
+  },
+  { value: `${uniqueTech.size}+`, label: 'Tecnologías' },
+]
